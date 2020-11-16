@@ -1,0 +1,90 @@
+@import './variables';
+@import './mixins';
+
+// container and its interior
+
+header {
+	background-image: url('../img/table-tennis-header.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: $center $center;
+	color: $color-white;
+
+	.container {
+		height: 538px;
+		@include modelFlexColumn;
+		@media (min-width: 1024px) {
+			height: 625px;
+		}
+		@import './nav';
+		div {
+
+			width: $width100;
+
+			// inscribete
+			&:nth-of-type(1) {
+				height: 25%;
+				text-align: center;
+				@include modelFlexColumn;
+				h2 {
+					text-shadow: $text-shadow;
+				}
+				button {
+					padding: 16px;
+					background-color: #58acb7;
+					font-weight: $bold;
+					color: $color-white;
+					border-radius: $border-radius;
+					font-size: 1.1em;
+					&:hover {
+						color: $color-yellow;
+						background-color: transparent;
+						border: 3px solid #58acb7;
+						@include cursor;
+					}
+				}
+			}
+			
+			//ayuntamiento
+			&:nth-of-type(2) {
+				@include modelFlexRow;
+				div {
+					height: initial;
+					display: $flex;
+					justify-content: $center;
+					flex-wrap: wrap;
+					align-items: $center;
+					width: 16%;
+					height: 30vw;
+					@media (min-width: 768px) {
+						width: 25%;
+						height: 10vw;
+					}
+					&:nth-of-type(2) {
+						i {
+							color:$color-yellow ;
+							&:hover {
+								color: $color-white;
+							}
+						}
+					}
+					&:last-of-type {
+						flex-direction: $column;
+						a:nth-of-type(1), a:nth-of-type(2){
+							padding-bottom: 5px;
+						}
+						@media (min-width: 768px) {
+							flex-direction: row;
+						}
+						i {
+							@include socialNet;
+							&:hover {
+								transform: scale(1.5);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

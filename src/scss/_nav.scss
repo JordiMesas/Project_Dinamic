@@ -1,0 +1,46 @@
+nav {
+    width: $width100;    
+    @include modelFlexRow;
+    ul {
+        li {
+            font-size: 17px;
+            a:hover {
+                color: $color-yellow;
+            }
+        }
+        @include showMin1024px;
+        display: none;
+    }
+    #hamburguer {
+        @include hideMin1024px;
+        @include hamburguer;
+    }
+    h1,
+    form {
+        width: $widthMovile;
+        @media (min-width: 1024px) {
+            width: 16%;
+        }
+    }
+    form {
+        display: $flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: $center;
+
+        input {
+            margin: 5px 0px 5px 5px;
+        }
+        input,
+        select {
+            border-radius: 3px;
+            padding: 3px;
+            font-size: 0.9em;
+            font-weight: $bold;
+            cursor: pointer;
+            @media (min-width: 768px) {
+                padding: 5px;
+            }
+        }
+    }
+}	

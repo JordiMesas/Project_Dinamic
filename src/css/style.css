@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+body .container {
+  padding: 15px;
+  margin: 0 3%;
+}
+body h1, body h2, body h3, body h4 {
+  font-family: "Lora", serif;
+  font-size: 1.4em;
+}
+body p {
+  font-weight: initial;
+}
+body p, body li {
+  font-size: 14.5px;
+}
+@media (min-width: 1024px) {
+  body p, body li {
+    font-size: 1em;
+  }
+}
+body li {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+  color: white;
+}
+body img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+body i {
+  color: white;
+  cursor: pointer;
+}
+
+header {
+  background-image: url("../img/table-tennis-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+header .container {
+  height: 538px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  header .container {
+    height: 625px;
+  }
+}
+header .container nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container nav ul {
+  display: none;
+}
+header .container nav ul li {
+  font-size: 17px;
+}
+header .container nav ul li a:hover {
+  color: yellow;
+}
+@media (min-width: 1024px) {
+  header .container nav ul {
+    display: block;
+    width: 56%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+header .container nav #hamburguer {
+  width: 30px;
+  height: 25px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  border: solid 2px white;
+  border-radius: 3px;
+}
+@media (min-width: 1024px) {
+  header .container nav #hamburguer {
+    display: none;
+  }
+}
+header .container nav #hamburguer div {
+  background-color: white;
+  height: 3px;
+}
+header .container nav h1,
+header .container nav form {
+  width: 30%;
+}
+@media (min-width: 1024px) {
+  header .container nav h1,
+header .container nav form {
+    width: 16%;
+  }
+}
+header .container nav form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .container nav form input {
+  margin: 5px 0px 5px 5px;
+}
+header .container nav form input,
+header .container nav form select {
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  header .container nav form input,
+header .container nav form select {
+    padding: 5px;
+  }
+}
+header .container div {
+  width: 100%;
+}
+header .container div:nth-of-type(1) {
+  height: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container div:nth-of-type(1) h2 {
+  text-shadow: 2px 2px 10px blue;
+}
+header .container div:nth-of-type(1) button {
+  padding: 16px;
+  background-color: #58acb7;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+header .container div:nth-of-type(1) button:hover {
+  color: yellow;
+  background-color: transparent;
+  border: 3px solid #58acb7;
+  cursor: pointer;
+}
+header .container div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container div:nth-of-type(2) div {
+  height: initial;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 16%;
+  height: 30vw;
+}
+@media (min-width: 768px) {
+  header .container div:nth-of-type(2) div {
+    width: 25%;
+    height: 10vw;
+  }
+}
+header .container div:nth-of-type(2) div:nth-of-type(2) i {
+  color: yellow;
+}
+header .container div:nth-of-type(2) div:nth-of-type(2) i:hover {
+  color: white;
+}
+header .container div:nth-of-type(2) div:last-of-type {
+  flex-direction: column;
+}
+header .container div:nth-of-type(2) div:last-of-type a:nth-of-type(1), header .container div:nth-of-type(2) div:last-of-type a:nth-of-type(2) {
+  padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  header .container div:nth-of-type(2) div:last-of-type {
+    flex-direction: row;
+  }
+}
+header .container div:nth-of-type(2) div:last-of-type i {
+  font-size: 2em;
+  padding-left: 10px;
+}
+header .container div:nth-of-type(2) div:last-of-type i:hover {
+  transform: scale(1.5);
+}
+
+footer .container div, main section:nth-of-type(5) .container div,
+main section:nth-of-type(5) .container h3, main section:nth-of-type(2) .container div,
+main section:nth-of-type(2) .container h4,
+main section:nth-of-type(2) .container h3 {
+  padding-bottom: 20px;
+}
+
+main section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  main section .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section:nth-of-type(1) {
+  background-color: #14b5e6;
+  color: white;
+  text-align: center;
+}
+main section:nth-of-type(1) .container {
+  height: 70vw;
+}
+@media (min-width: 425px) {
+  main section:nth-of-type(1) .container {
+    height: 242px;
+  }
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(1) .container {
+    height: 15vw;
+  }
+}
+@media (min-width: 1024px) {
+  main section:nth-of-type(1) .container {
+    height: 10vw;
+  }
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(1) .container div:first-of-type {
+    width: 50%;
+  }
+}
+main section:nth-of-type(1) .container div h3 {
+  font-size: 1.2rem;
+}
+main section:nth-of-type(1) .container div .date {
+  font-weight: inherit;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(2) .container {
+    flex-direction: column;
+  }
+}
+main section:nth-of-type(3) {
+  background-image: url("../img/ping-pong.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main section:nth-of-type(3) .container {
+  height: 40vw;
+  color: white;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(3) .container {
+    height: 25vw;
+  }
+}
+main section:nth-of-type(3) .container #buttonClassif {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main section:nth-of-type(4) h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(4) h3 {
+    padding-bottom: 10px;
+  }
+}
+main section:nth-of-type(4) .container #new_1 {
+  background-image: url("../img/background_new_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 59vw;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(4) .container #new_1 {
+    width: 30%;
+    height: 30vw;
+  }
+}
+main section:nth-of-type(4) .container #new_1 a {
+  padding: 0 0 8px 15px;
+}
+main section:nth-of-type(4) .container #new_1 a:hover {
+  color: yellow;
+}
+main section:nth-of-type(4) .container #new_2 {
+  background-image: url("../img/background_new_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 59vw;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(4) .container #new_2 {
+    width: 30%;
+    height: 30vw;
+  }
+}
+main section:nth-of-type(4) .container #new_2 a {
+  padding: 0 0 8px 15px;
+}
+main section:nth-of-type(4) .container #new_2 a:hover {
+  color: yellow;
+}
+main section:nth-of-type(4) .container #new_3 {
+  background-image: url("../img/background_new_3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 59vw;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(4) .container #new_3 {
+    width: 30%;
+    height: 30vw;
+  }
+}
+main section:nth-of-type(4) .container #new_3 a {
+  padding: 0 0 8px 15px;
+}
+main section:nth-of-type(4) .container #new_3 a:hover {
+  color: yellow;
+}
+@media (min-width: 768px) {
+  main section:nth-of-type(5) .container div {
+    width: 60%;
+  }
+  main section:nth-of-type(5) .container div:first-of-type {
+    width: 100%;
+    padding-right: 50px;
+  }
+}
+
+footer {
+  color: white;
+  background-color: #373c40;
+}
+@media (min-width: 768px) {
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+footer .container div {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  footer .container div {
+    width: 24%;
+    height: 220px;
+  }
+}
+@media (min-width: 1024px) {
+  footer .container div {
+    height: 268px;
+  }
+}
+footer .container div h4,
+footer .container div li {
+  padding-bottom: 10px;
+}
+footer .container div li,
+footer .container div a {
+  font-weight: initial;
+  color: rgba(255, 255, 255, 0.836);
+}
+footer .container div li:hover,
+footer .container div a:hover {
+  color: white;
+}
+footer .container div i {
+  font-size: 2em;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+footer #copy {
+  background-color: #282828;
+  text-align: center;
+  padding: 20px;
+}
+footer #copy small {
+  font-size: xx-small;
+}
+@media (min-width: 768px) {
+  footer #copy small {
+    font-size: small;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

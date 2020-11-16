@@ -1,0 +1,153 @@
+@import './variables';
+@import './mixins';
+
+// clase extend
+%format-padding-botton {
+	padding-bottom: $padding-bottom;
+}
+
+// Page Main
+
+main {
+	section {
+		.container {
+			@include modelFlexColumn;
+			@media (min-width: 768px) {
+				@include modelFlexRow;
+			}
+		}
+
+		//temps
+
+		&:nth-of-type(1) {
+			background-color: #14b5e6;
+			color: $color_white;
+			text-align: $center;
+			.container {
+				height: $heightVw - 30vw;
+				@media (min-width: 425px) {
+					height: 242px
+				}
+				@media (min-width: 768px) {
+					height: $heightVw - 85vw;
+				}
+				@media (min-width: 1024px) {
+					height: $heightVw - 90vw;
+				}
+				 // cuidado al fer laptop!!!!!!!
+				div {
+					&:first-of-type {
+						@media (min-width: 768px) {
+							width: $width100 - 50%;
+						}
+					}
+					h3 {
+						font-size: 1.2rem;
+					}
+					.date {
+						font-weight: inherit;
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+
+		// benvinguts
+
+		&:nth-of-type(2) {
+			.container {
+				@media (min-width: 768px) {
+					flex-direction: column;
+				}
+				div,
+				h4,
+				h3 {
+					@extend %format-padding-botton;
+				}
+			}
+		}
+
+		// clasificaciones
+
+		&:nth-of-type(3) {
+			background-image: url('../img/ping-pong.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: $center $center;
+			.container {
+				height: $heightVw - 60vw;
+				color: $color_white;
+				@media (min-width: 768px) {
+					height: $heightVw - 75vw;
+				}
+				#buttonClassif {
+					padding: 10px 20px;
+					background-color: transparent;
+					border: 2px solid $color_white;
+					border-radius: $border-radius;
+					@include cursor;
+				}
+			}
+		}
+
+		//noticias
+
+		&:nth-of-type(4) {
+			h3 {
+				@media (min-width: 768px) {
+					padding-bottom: 10px;
+				}
+				padding-top: 20px;
+				text-align: $center;
+			}
+			.container {
+				@for $i from 1 through 3 {
+					#new_#{$i} {
+						background-image: url('../img/background_new_#{$i}.png');
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: $center top;
+						@media (min-width: 768px) {
+							width: $width100 - 70%;
+							height: $heightVw - 70vw;
+						}
+						height: $heightVw - 41vw;
+						width: $width100;
+						color: $color_white;
+						display: $flex;
+						flex-direction: $column;
+						justify-content: flex-end;
+						margin-bottom: 20px;
+						border-radius: $border-radius;
+						a {
+							padding: 0 0 8px 15px;
+							&:hover{
+								color: $color-yellow;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// Información
+
+		&:nth-of-type(5) {
+			.container {
+				div,
+				h3 {
+					@extend %format-padding-botton;
+				}
+				div {
+					@media (min-width: 768px) {
+						width: $width100 - 40%;
+						&:first-of-type {
+							width: $width100;
+							padding-right: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

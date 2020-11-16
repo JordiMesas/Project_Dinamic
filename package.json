@@ -1,0 +1,30 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Competición de tenis de mesa",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordiMesas/Project.git"
+  },
+  "keywords": [
+    "Tenis",
+    "de",
+    "mesa",
+    "competición",
+    "open",
+    "liga"
+  ],
+  "author": "Jordi Mesas <jordimesas54@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JordiMesas/Project/issues"
+  },
+  "homepage": "https://github.com/JordiMesas/Project#readme",
+  "devDependencies": {
+   
+  }
+}

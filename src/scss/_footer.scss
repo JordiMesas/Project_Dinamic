@@ -1,0 +1,54 @@
+@import './variables';
+@import './mixins';
+@import './main';
+
+// Footer
+
+footer {
+	color: $color-white;
+	background-color: #373c40;
+	.container {
+		@media (min-width: 768px) {
+			@include modelFlexRow;
+		}
+		div {
+			width: $width100;
+			@extend %format-padding-botton;
+			@media (min-width: 768px) {
+				width: $width100 - 76%;
+				height: 220px;
+			}
+			@media (min-width: 1024px) {
+				height: 268px;
+			}
+
+			h4,
+			li {
+				padding-bottom: 10px;
+			}
+			li,
+			a {
+				font-weight: initial;
+				color: rgba(255, 255, 255, 0.836);
+				&:hover {
+					color: $color-white;
+				}
+			}
+			i {
+				@include socialNet;
+				padding-top: 10px;
+			}
+		}
+	}
+	#copy {
+		background-color: #282828;
+		text-align: $center;
+		padding: 20px;
+		small {
+			font-size: xx-small;
+			@media (min-width: 768px) {
+				font-size: small;
+			}
+		}
+	}
+}

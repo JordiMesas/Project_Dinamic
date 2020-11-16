@@ -1,0 +1,11 @@
+@import './basic';
+@import './variables';
+@import './mixins';
+
+header {
+    background-color: black;
+    color: $color-white;    
+    @import './nav';
+}
+@import './form';
+@import './footer';
