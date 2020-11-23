@@ -1,7 +1,8 @@
  import {noActiveEvent} from './noActiveEvent.js';
  
- const validateDni = (dni,e) => {
+ const validateDni = (dni,e,input) => {
 	console.log(dni);
+	console.log(input);
 	let letters = [
 		'T',
 		'R',
@@ -37,9 +38,9 @@
 	if (dni.length <= 9) {
 		if (intDni < 0 || intDni > 99999999) {
 			noActiveEvent(e);
-			alert(
-				'El numero proporcionado no es valido, no se muestran mas mensajes'
-			);
+			input.style.border = '1px solid red';
+			message.innerText = `-El numero proporcionado no es valido, no se muestran mas mensajes.\n`;
+			
 		} else if (isNaN(userLetter)) {
 
 			let res = intDni % 23;
@@ -47,18 +48,23 @@
 			console.log(result);
 			if(result != userLetter.toUpperCase()){
 				noActiveEvent(e);
-				alert('¡su numero del dni y letra no es correcto!')
+				input.style.border = '1px solid red';
+				message.innerText = `-¡su numero del dni y letra no es correcto! \n`;				
+			}else{
+				input.style.border = '1px solid green';
 			}			
 				
 		}else{
 			noActiveEvent(e);
-			alert('No existe una letra al final de tu dni');
+			input.style.border = '1px solid red';
+			message.innerText = `-¡La letra de su dni no es correcta!\n`;			
 		}
 	}
 	 else {
 		noActiveEvent(e);
-		alert('demasiados datos para el dni');
-	}
+		input.style.border = '1px solid red';
+		message.innerText = `-demasiados datos para el dni\n`;		
+	}	
 };
 
 export default validateDni;

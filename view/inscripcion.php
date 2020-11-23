@@ -92,6 +92,7 @@
                 
             </div>            
             <p id="message"></p>
+            <p id="date"></p>
         </form>
     </div>
     <footer>
