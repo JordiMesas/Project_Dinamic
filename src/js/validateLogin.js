@@ -14,6 +14,10 @@ document.getElementById('dni').addEventListener('focusout', (e) => {
 	}	
 });
 
+fields[fields.length - 1].addEventListener('focusout', () => {
+	lessThan10(fields[4].value, fields[fields.length - 1].value);
+});
+
 document.getElementById('sub').addEventListener('click', (e) => {
 
 	message.innerText = '';
@@ -21,9 +25,7 @@ document.getElementById('sub').addEventListener('click', (e) => {
 	if (fields[3].value != '') {
 		validateDni(fields[3].value, e, fields[3]);
 	}
-	console.log(fields[fields.length - 1].value);
-	lessThan10(fields[4].value, fields[fields.length - 1].value);
-
+	
 	for (let i = 0; i < fields.length - 1; i++) {
 		if (fields[i].value == '') {
 			noActiveEvent(e);
