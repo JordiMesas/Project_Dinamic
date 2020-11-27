@@ -6,5 +6,5 @@ export const effectForm = (input, text) => {
 };
 
 export const effectFormInit = (input) =>{
-    input.style.border = '1px solid green';
+    input.style.border = '1px solid black';
 }
